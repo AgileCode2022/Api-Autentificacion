@@ -1,0 +1,14 @@
+create database prueba;
+use prueba;
+
+create table usuario(
+    email varchar(30),
+    password varchar(255)
+);
+
+create table backoffice(
+    email varchar(30),
+    password varchar(255)
+);
+
+Nota: Los parametros para la base de datos se encuentran establecidos en archivo "Config.php"
