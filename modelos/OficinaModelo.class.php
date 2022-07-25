@@ -1,6 +1,6 @@
 <?php
 
-    require $_SERVER['DOCUMENT_ROOT'] ."/nueva/utils/autoload.php"; 
+    require $_SERVER['DOCUMENT_ROOT'] ."/Api-Autentificacion/utils/autoload.php"; 
 
     class OficinaModelo extends Modelo{
 
@@ -21,6 +21,23 @@
 
             }
 
+        }
+
+        public function ObtenerTodos(){
+            
+            $sql = "SELECT * FROM backoffice";
+            $filas = $this -> conexion -> query($sql) -> fetch_all(MYSQLI_ASSOC);
+
+            $elementos = [];
+            foreach($filas as $fila){
+                $u = new OficinaControlador();
+                $u -> Email = $fila['email'];
+                array_push($elementos, $u);
+
+            }
+
+            return $elementos;
+             
         }
     
     }

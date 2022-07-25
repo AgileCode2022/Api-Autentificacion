@@ -1,6 +1,6 @@
 <?php 
 
-    require $_SERVER['DOCUMENT_ROOT'] ."/nueva/utils/autoload.php";
+    require $_SERVER['DOCUMENT_ROOT'] ."/Api-Autentificacion/utils/autoload.php";
 
     const IP_DB = "127.0.0.1";
     const USER_DB = "root";
